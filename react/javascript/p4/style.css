@@ -1,0 +1,56 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: url("../../design/11_travelsite/img/bg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width:60%;
+    height:250px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow:0 0 3px;
+}
+
+.timer{
+    width:100%;
+    font-size: 70px;
+    text-align: center;
+    margin:0px  auto;
+    padding:35px;
+}
+.startStpBtn{
+    text-align: center;
+}
+
+button{
+    margin:0 10px;
+}
+
+.start {
+    background-color: green;
+    color:black;
+    padding:1rem 1rem;
+    outline:none;
+    border-radius: 5px;
+    font-size:1.2rem;
+}
+
+.reset{
+    background-color:red;
+    color:black;
+    padding:1rem 1rem;
+    outline:none;
+    border-radius: 5px;
+    font-size:1.2rem;
+}

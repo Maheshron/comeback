@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:80vw;
+    height: 100vh;
+    margin:0 auto;
+    /* border:1px solid black; */
+    background-color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:2rem;
+
+}
+
+.square{
+    width:18vw;
+    height: 32vh;
+    background-color: black;
+}
+

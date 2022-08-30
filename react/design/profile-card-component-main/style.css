@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --font-family:'Kumbh Sans', sans-serif;
+    --clr-dark-cyan:hsl(185,75%,39%);
+    --clr-very-dark-desaturated-blue:hsl(229,23%,23%);
+    --clr-dark-grayish-blue:hsl(227,10%,46%);
+    --clr-dark-gray:hsl(0,0%,59%);
+    --font-size:18px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background-color: var(--clr-dark-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container{
+    width:350px;
+    height:60%;
+   
+    border-radius: 12px;
+    
+}
+
+.card{
+   background-color: white;
+   height: auto;
+   border-radius: 12px;
+}
+
+.card-header svg{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+.card .image{
+   width:30%;
+   margin:0 auto;
+}
+.card .image img{
+    width:100%;
+    border-radius: 50%;
+    border:6px solid white;
+}
+
+.names{
+    text-align: center;
+}
+
+.description{
+  width:70%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding:2rem 0rem;
+}
+
+.line{
+    width:100%;
+    height: 1px;
+    width:100%;
+    background-color: gray;
+}
+
+.card-body{
+    padding-bottom:1rem;
+    margin-top:-50px
+}
+
+
+.description *div{
+    bottom:0;
+}
+
+.names h3{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--clr-dark-gray);
+    font-weight: 900;
+}
+
+.names h3 span{
+    font-size:1rem;
+}
+
+.names p{
+    color:var(--clr-dark-gray);
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+.description div h5{
+    font-family: var(--font-family);
+    color: var(--clr-very-dark-desaturated-blue);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.description div p{
+    color: var(--clr-dark-gray);
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+.svg1{
+    position: absolute;
+    top: -621px;
+    left: -309px;
+    z-index: -1;
+}
+
+.svg2{
+    position: absolute;
+    bottom:-621px;
+    right:-309px;
+    z-index: -1;
+}
+
+.card-header{
+    background-image: url("./images/bg-pattern-card.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+@media (max-width:375px) {
+    body{
+        width:100vw;
+        height: 100vh;
+    }
+        .container{
+            width:80%;
+            height: 100%;
+            margin:2rem auto;
+        }
+}

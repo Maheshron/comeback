@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height: 100vh;
+    position:relative;
+   
+}
+.container{
+    position: absolute;
+    width:50%;
+    height: 50%;
+    background-color: black;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spike{
+    height: 6px;
+    width:12px;
+    background-color: green;
+}

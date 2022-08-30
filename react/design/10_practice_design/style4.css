@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+   
+    background-color: #f8f8f8;
+    padding:2em 0;
+}
+.container{
+    width:90%;
+    max-width: 900px;
+    
+    margin:0 auto;
+}
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    color: #143771;
+    font-size: 2rem;
+    margin: 0;
+}
+.site_title p{
+    font-weight: 700;
+    color:#1792d2;
+    font-size:.75rem;
+    margin:0;
+
+}
+.active{
+    border-bottom: 1px solid #707070;
+    
+}
+
+nav ul{
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+
+    margin-left:2em;
+
+}
+
+nav a{
+
+    text-decoration: none;
+    padding:.25em 0;
+}
+
+
+main{
+    width: 70%;
+}
+aside{
+    width: 30%;
+}
+
+.article_img{
+    width:100%;
+}
+
+footer{
+    background-color: #143771;
+    text-align: center;
+    color:whitesmoke;
+    padding:2em 0;
+}
+
+.article_recent{
+    width: 100%;
+}
+
+.article_recent_main{
+    width:27%;
+}
+
+.article_recent_secondary{
+    width:67%;
+}
+.article_recent_main img{
+    width: 100%;
+}
+
+.article_recent{
+    display: flex;
+}
+.container{
+    display: flex;
+}
+.sidebar_widget{
+    background-color: #f1f1f1;
+    width:90%;
+    padding:2em 1em;
+    margin:2em;
+}
+
+.sidebar_posts{
+    background-color: white;
+    width:100%;
+    padding:0;
+    margin-top:10px;
+}
+.sidebar_background{
+    background-color: #f1f1f1;
+    width:90%;
+    padding:2em 1em;
+    margin:2em;
+}
+aside .sidebar_widget img{
+    width: 100%;
+}
+
+.sidebar_posts img{
+    width:100%;
+}
+
+.article_title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:1.5rem;
+    color:#143771
+}
+.article_read_more{
+    color:#1792d2;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.article_info{
+    margin:2% 0;
+}
+
+.article_body{
+    margin:2% 0;
+}
+
+.article_featured{
+    border-bottom:1px solid #707070;
+    margin: 4%;
+}
+
+@media (max-width:675px){
+    .container_nav{
+      
+        flex-direction: column;
+    }
+    header{
+        text-align: center;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav li{
+        margin:.5em 0;
+    }
+    .container-flex{
+        flex-direction: column;
+        width:100%;
+    }
+    main{
+        width:100%;
+    }
+    aside{
+        width:100%;
+    }
+}
