@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --font-family:'Josefin Sans', sans-serif;
+    --clr-desaturated-red:hsl(0,36%,70%);
+    --clr-soft-red:hsl(0,93%,68%);
+    --clr-dark-grayish-red:hsl(0,6%,24%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+
+.container{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.left{
+    width:62%;
+    /* height: 100%; */
+   background:url("./images/bg-pattern-desktop.svg")
+}
+
+.right{
+    width:38%;
+    /* height: 100%; */
+   
+}
+
+.right img{
+    width:100%;
+    height:100%;
+}
+
+.main {
+    width:50%;
+    margin:0 auto;
+}
+
+.main .logo{
+    padding:2rem 0rem;
+    margin:2rem 0rem;
+}
+
+.description h1{
+    font-family: var(--font-family);
+    font-size: 3rem;
+    margin:0.5rem 0rem;
+    letter-spacing: 10px;
+    color: var(--clr-desaturated-red);
+    font-weight: 200;
+    font-style: light;
+}
+
+.description h1.change{
+    color:black;
+    font-weight: 500;
+}
+
+.description p{
+    padding:1rem 0rem;
+    color: var(--clr-desaturated-red);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-style: bold;
+    line-height: 1.5rem;
+    
+}
+
+.form{
+    width:100%;
+    margin:2rem 0rem;
+    position:relative;
+}
+
+.form input{
+    width:95%;
+    padding:1rem 0.5rem;
+    border-radius: 50px;
+    border:1px solid var(--clr-desaturated-red);
+}
+
+.form input::placeholder{
+    color: var(--clr-desaturated-red);
+    
+}
+.from input:focus{
+    border:none;
+}
+
+.form button{
+    width:20%;
+    border:0;
+    /* padding:1rem 0rem; */
+    height: 100%;
+    border-radius: 50px;
+    color:white;
+    font-size: 2rem;
+    background: linear-gradient(135deg ,hsl(0,80%,86%),hsl(0,74%,74%));
+    position: absolute;
+    left:75%;
+}

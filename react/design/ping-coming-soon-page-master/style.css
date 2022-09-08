@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root{
+    --font-family:'Libre Franklin', sans-serif;
+    --clr-blue:hsl(223,87%,63%);
+    --clr-pale-blue:hsl(223,100%,88%);
+    --clr-light-red:hsl(354,100%,66%);
+    --clr-gary:hsl(0,0%,59%);
+    --clr-very-dark-blue:hsl(209,33%,12%);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    margin:0 auto;
+}
+
+header{
+    margin-top:2rem;
+}
+
+.title{
+    width:100%;
+    margin-top:2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.description{
+    width:100%;
+    text-align: center;
+   padding:2rem;
+}
+
+.description h2{
+    color: var(--clr-gary);
+    font-family: var(--font-family);
+    font-weight: lighter;
+    font-size:2rem;
+}
+
+.description h2 span{
+    color: var(--clr-very-dark-blue);
+    font-weight: 900;
+    font-style: bolder;
+}
+
+.description p {
+    padding:0.8rem;
+    color: var(--clr-very-dark-blue);
+    font-family: var(--font-family);
+}
+
+.form {
+    width:50%;
+    margin:0 auto;
+
+}
+
+.form div{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form div input{
+    width:68%;
+    padding:1rem;
+    border-radius: 50px;
+    border:1px solid var(--clr-pale-blue);
+
+}
+
+.form div input::placeholder{
+    color: var(--clr-gary);
+}
+
+.form div button{
+    width:28%;
+    background-color: var(--clr-blue);
+    color: white;
+    padding:1rem;
+    border:0;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.banner{
+   width:50%;
+   height: 100%;
+   margin:0 auto;
+   margin-top:2rem;
+   
+}
+
+.banner img{
+    width:100%;
+    height: 100%;
+}
+
+footer{
+    width:100%;
+    padding:3rem 0rem;
+}
+
+footer .icons{
+    width:30%;
+    margin:0 auto;
+    padding:2rem 0rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+ion-icon{
+    margin-left:12px;
+    color: var(--clr-blue);
+}
+footer .copyright{
+    text-align: center;
+}
+
+
+@media (max-width:375px){
+    .container{
+        width:100%;
+        height: 100%;
+    }
+
+    .banner{
+        width:90%;
+        height: auto;
+        
+        margin:1rem auto;
+    }
+    .banner img{
+        width:100%;
+
+    }
+    .form {
+        width:90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .form div{
+        flex-direction: column;
+    }
+    .form div input{
+        width:90%;
+        margin:2rem auto;
+    }
+
+    .form div button{
+        width: 90%;
+        margin:0 auto;
+    }
+
+    footer .icons ion-icon{
+        font-size:1.8rem;
+    }
+
+    .copyright{
+        font-family: var(--font-family);
+        color: var(--clr-gary);
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <img src="./images/drawers.jpg" alt="">
+    </div>
+    <div class="right">
+      <div class="description">
+        <h4>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h4>
+        <p>Ever been in a room and felt like something was missing? Perhaps it felt slightl bare and uninviting.I have got some simple tips to help you make any room feel complete</p>
+        <div class="card">
+          <div class="left">
+            <div>
+            <img src="./images/avatar-michelle.jpg" alt="">
+          </div>
+            <div class="names">
+            <h6>Michelle Appleton</h6>
+            <date>28 jun 2020</date>
+          </div>
+          </div>
+          <div class="right">
+            <img  onclick="tooltipShow()" src="./images/icon-share.svg" alt="" id="share">
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+  </div>
+  <div class="tooltip" id="tooltip">
+    
+    <p>Share</p>
+    <img src="./images/icon-facebook.svg" alt="">
+    <img src="./images/icon-pinterest.svg" alt="">
+    <img src="./images/icon-twitter.svg" alt="">
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
