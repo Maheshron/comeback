@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+            <div class="images">
+
+              <div class="bg-card-front">
+                  <div class="content">
+                    <div class="top">
+                        <div class="bigcircle"></div>
+                        <div class="smallcircle"></div>
+                    </div>
+                    <div class="down">
+                      <div class="digits">
+                          <div class="number">
+                            <p id="first1">0000</p>
+                            <p id="first2">0000</p>
+                            <p id="first3">0000</p>
+                            <p id="first4">0000</p>
+                          </div>
+                        <div class="name">
+                          <p id="showname">Mahesh Kumar</p>
+                          <p id="expiry"><span id="exd">00</span>/<span id="exm">00</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="bg-card-back">
+                  <div class="cvv">
+                    <p id="showcvv">000</p>
+                  </div>
+              </div>
+              
+            </div>
+    </div>
+    <div class="right">
+          <div class="metadata">
+             <div class="form"> 
+               <div>
+                  <p>CARDHOLDER NAME</p>
+                  <input type="text" onkeydown="showName()" id="name">
+               </div>
+               <div>
+                <p>CARD NUMBER</p>
+                <input type="text"  id="card">
+               </div> 
+               <div class="multiple">
+                  <div class="first">
+                      <div>
+                        <p>EXP DATE(MM/YY)</p>
+                      </div>
+                      <div>
+                      <input type="text" onkeydown="expiry()" id="expiry-date">
+                      <input type="text" onkeydown="expirymonth()" id="expiry-month">
+                    </div>
+                    </div>
+                  <div class="second">
+                    <p>CVV</p>
+                    <input type="text" id="cvv" onkeydown="myFunction()">
+                  </div>
+               </div>
+               <div>
+                <button>Confirm</button>
+               </div>
+             </div>
+          </div>
+    </div>
+  </div>
+
+  <script src="script.js">
+
+  </script>
+</body>
+</html>

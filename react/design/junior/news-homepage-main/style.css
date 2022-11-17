@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root{
+    --font-family:'Inter', sans-serif;
+    --clr-soft-orange:hsl(35,77%,62%);
+    --clr-soft-red:hsl(5,85%,63%);
+    --clr-of-white:hsl(36,100%,99%);
+    --clr-grayish-blue:hsl(233,8%,79%);
+    --clr-dark-grayish-blue:hsl(236,13%,42%);
+    --clr-very-dark-blue:hsl(240,100%,5%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width:100vw;
+    font-family: var(--font-family);
+}
+
+.container{
+    width:80%;
+    height: 100%;
+    margin:0 auto;
+}
+.header{
+    height:10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.header nav ul li{
+    font-family: var(--font-family);
+}
+
+.header nav ul li a{
+    color: var(--clr-grayish-blue);
+    text-decoration: none;
+    margin-left:12px;
+}
+
+.banner{
+    height: 61%;
+   
+}
+
+.banner .main-padding{
+    padding:1rem 0rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.banner .main-padding .left{
+    width:66%;
+    height: 100%;
+    background-color: white;
+    
+}
+
+.banner  .main-padding .right{
+    width:32%;
+    height: 100%;
+    background-color:black;
+}
+
+.banner .main-padding .left .row1{
+    height: 50%;
+    width:100%;
+}
+.banner .main-padding .left .row1 img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner .main-padding .left .row2 {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+.banner .main-padding .left .row2 .big-text {
+    width:40%;
+}   
+
+.banner .main-padding .left .row2 .description{
+    width:58%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+.banner .main-padding .left .row2 .big-text h1{
+
+    font-size:3rem;
+}
+.banner .main-padding .left .row2 .description button{
+    width:50%;
+    padding:1rem 2rem;
+    background-color: var(--clr-soft-red);
+    color: white;
+    font-family: var(--font-family);
+    border:0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.banner .main-padding .left .row2 .description p{
+    font-size: 15px;
+}
+
+.three{
+    height:20%;
+   
+}
+
+.banner .main-padding .right .content .news{
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.banner .main-padding .right .content .news .latest-news{
+    border-bottom: 1px solid var(--clr-grayish-blue);
+}
+
+.banner .main-padding .right .content .news .latest-news p{
+    font-size:15px;
+    padding-top:.5rem;
+    padding-bottom:1rem;
+}
+.banner .main-padding .right .content .news .last{
+    border-bottom: 0;
+}
+
+.banner .main-padding .right .content{
+    width:90%;
+    height: 100%;
+    margin:0 auto;
+    padding:0.8rem 0rem;
+    color: white;
+}
+
+.banner .main-padding .right .content h1{
+    color: var(--clr-soft-orange);
+}
+.three{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards{
+    width:33.3%;
+    display: flex;
+}
+
+.cards .left{
+    width:30%;
+    height: 100%;
+    
+}
+.cards .right{
+    width:70%;
+}
+.cards .right * {
+    margin-left:12px;
+}
+
+.cards .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards .right h3{
+    font-size: 1.5rem;
+    color: var(--clr-grayish-blue);
+}
+
+.cards .right h5{
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.three .cards .left img{
+    width: 100%;
+    height: 100%;
+
+}

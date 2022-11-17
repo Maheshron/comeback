@@ -1,0 +1,373 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    width:100vw;
+    height: auto;
+}
+
+
+.container{
+    width:85%;
+    margin:auto;
+    height: 100vh;
+ 
+}
+
+header{
+    padding:1.5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+header nav ul li{
+    margin-left:12px;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+}
+header nav ul li.cart{
+    background-color: orange;
+    padding:0.5rem 1.4rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section2{
+    display: flex;
+    height: calc(100% - 106px);
+    width:100%;
+    justify-content: space-around;
+}
+
+.section2 .left{
+    width:50%;
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+}
+
+.section2 .right{
+    
+    height: 100%;
+}
+
+.section2 .right div.image {
+    width:100%;
+    height: 100%;
+}
+
+.section2 .right div.image img{
+    width:auto;
+    height: auto;
+}
+
+.section2 .left .content * { 
+        padding:0.5rem 0rem;
+}
+
+.section2 .left .content p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section2 .left .content h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.section2 .left .content button{
+    background-color: orange;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 50px;
+    padding:0.4rem 0.8rem;
+    border:0;
+}
+.section3   {
+    width: 100%;
+    height: auto;
+}
+.section3 .menu{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section3 .title{
+    padding:1rem;
+}
+.section3 .title p{
+    font-size: 14px;
+    font-weight: bolder;
+
+}
+
+.section3 .menu .cards{
+    width:15%;
+    height: 360px;
+   
+}
+.section3 .menu .cards .card{
+    width:100%;
+    height: 100%;
+}
+
+
+.section3 .cards .card div.image{
+    width:100%;
+    height: 50%;
+}
+.section3 .cards .card div.image img{
+        width: 100%;
+        height: 100%;
+}
+
+.section3 .cards .card div.name{
+        width: 100%;
+        height: 10%;
+        text-align: center;
+    }
+.section3 .cards .card div.name p{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.section3 .cards .card div.type{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-color: white;
+}
+.section3 .cards .card div.type p span{
+    background-color: #e1e1e1;
+    padding: 0.2rem 0.9rem;
+    border-radius: 50px;
+}
+.section3 .cards .card div.last{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section3 .cards .card div.last div button{
+        background-color: orange;
+        color: black;
+        border:0;
+        font-weight: bolder;
+        font-size:15px;
+        padding:0.4rem .8rem;
+        border-radius: 50px;
+}
+
+.products{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.products .card{
+    width:18%;
+    height: 370px;
+    
+    /* background-color: black; */
+    /* color: white; */
+}
+.products .card .card-head{
+    width:100%;
+    height: 60%;
+}
+
+.products .card .card-head img{
+        width:100%;
+        height: 100%;
+
+}
+
+.products .card .card-body{
+    padding:0.4rem 0rem;
+}
+.name , .type{
+    text-align: center;
+    padding:0.5rem 0rem;
+}
+.products .card .card-body div.last{
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products .card .card-body div.name p{
+        font-size: 1.2rem;
+        font-weight: bolder;
+}
+.products .card .card-body div.type p span{
+        background-color: #e1e1e1;
+        border-radius: 50px;
+        padding:0.4rem 0.8rem;
+}
+
+.products .card .card-body div.last button{
+        background-color: orange;
+        padding:0.4rem 0.8rem;
+        color: black;
+        border:0;
+        border-radius: 50px;
+    }
+
+section.footer{
+    width:100%;
+    height: 20px;
+    background-color: orange;
+    color: white;
+    align-items: center;
+    padding:2rem 0rem;
+}
+
+.footer p{
+    text-align: center;
+    padding:0.5rem 1rem;
+}
+
+
+ .cart{
+    width:60%;
+    margin:0 auto;
+    padding:2rem 0rem;
+}
+
+.cart .box{
+    height: 130px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
+}
+div.image{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.image .image1 img{
+    width:100%;
+    height: 100%;
+}
+
+div.image div.name{
+    display: flex;
+    align-items: center;
+    padding:0rem 1rem;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.button button{
+    border:0;
+    background-color: orange;
+    padding:0.4rem 0.8rem;
+    color: black;
+    border-radius: 50px;
+}
+
+.button .nobackground{
+    background-color: white;
+}
+
+.delete button{
+    background-color: red;
+    border: 0;
+    padding:0.4rem 0.8rem;
+    color: black;
+    border-radius: 50px;
+}
+div.total  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+div.total p{
+    padding:1rem 0rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+div.total button{
+    background-color: orange;
+    padding:0.5rem 1rem;
+    color: black;
+    border: 0;
+    border-radius: 50px;
+}
+.container1{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register{
+    /* background-color: black; */
+    width:40%;
+    height: 50%;
+}
+
+.register h2{
+    text-align: center;
+}
+
+.formbox{
+    width:80%;
+    height: 100%;
+    margin:0 auto
+}
+form{
+    width:100%;
+    height: 100%;;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-evenly;
+}
+form input[type="text"],form input[type="password"]{
+    padding:1rem 0.4rem;
+    border:none;
+    border-bottom: 2px solid orange;
+}
+form input[type="submit"]{
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    padding:1rem 0.5rem;
+    border:none;
+    border-radius: 50px;
+}
