@@ -3,18 +3,19 @@ import React from 'react'
 import '../App.css';
 
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 import Pizzaui from '../components/Pizzaui'
+import Products from '../components/Products';
 
 
 function Home() {
   return (
     <div>
-      <div className='container'>
-        <Navbar />
+     
+        
         <Pizzaui />
+        <Products />
         <Footer />
-        </div>
+        
     </div>
   )
 }

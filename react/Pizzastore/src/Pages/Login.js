@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <>
-        <div className="container1">
+        <div className="container">
     <div className="register">
         <h2>Pizza Shop</h2>
         <div className="formbox">

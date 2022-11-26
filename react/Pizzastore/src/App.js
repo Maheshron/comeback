@@ -6,6 +6,12 @@ import Cart from "./components/Cart";
 import { BrowserRouter, Routes,Route,Navigate  } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+import Products from './components/Products';
+import Navbar from './components/Navbar';
+import './App.css';
+import CartProvider from './CartContext';
+
+
 
 function App() {
 
@@ -19,9 +25,15 @@ function App() {
   }
 
   return (
+
+    <div className='container'>
+     <CartProvider>
     <BrowserRouter>
+     <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}>
+
+    
+          <Route path="/">
            <Route 
             index
             element={
@@ -32,11 +44,14 @@ function App() {
            />
             <Route  path="cart" element={<Cart />} />
             <Route path="login" element={<Login />} />
+            <Route path="products" element={<Products />} />
 
             <Route path="register" element={<Register />} />
           </Route>
         </Routes>
     </BrowserRouter>
+    </CartProvider>
+    </div>
     
   );
 }
