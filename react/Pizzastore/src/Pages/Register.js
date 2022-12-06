@@ -27,7 +27,7 @@ function Register() {
 
   return (
     <>
-         <div className="container">
+         <div className="container1">
             <div className="register">
                 <h2>Pizza Shop</h2>
                 <div className="formbox">

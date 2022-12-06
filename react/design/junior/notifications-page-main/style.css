@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root{
+    --font-family:'Plus Jakarta Sans', sans-serif;
+    --clr-red:hsl(1,90%,64%);
+    --clr-blue:hsl(219,85%,26%);
+    --clr-white:hsl(0,0%,100%);
+    --clr-very-light-grayish-blue:hsl(210,60%,98%);
+    --clr-light-grayish-blue-one:hsl(211,68%,94%);
+    --clr-light-grayish-blue-two:hsl(205,33%,90%);
+    --clr-grayish-blue:hsl(219,12%,42%);
+    --clr-very-dark-blue:hsl(224,21%,14%);
+    --ff-font-weight-neutral:500;
+    --ff-font-weight-bold:800;
+
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width:100vw;
+    background-color: var(--clr-very-light-grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width:50%;
+    height:95%;
+    background-color: var(--clr-white);
+    border-radius: 12px;
+}
+
+.header{
+    width:90%;
+    margin:0 auto;
+    padding:1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header div h3{
+    color: var(--clr-very-dark-blue);
+    font-family: var(--font-family);
+    font-weight: var(--ff-font-weight-bold);
+}
+
+.header div h3 span{
+    background-color: var(--clr-very-dark-blue);
+    padding:0.1rem 0.4rem;
+    color: var(--clr-white);
+}
+
+.header div p{
+    color:var(--clr-grayish-blue);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.notifications{
+    width:90%;
+    height: calc(100% - 55px);
+    margin: 0 auto;
+    padding:1rem 0rem;
+    
+}
+
+.notifications .box{
+    width:100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    margin:.4rem 0rem;
+    background-color: var(--clr-light-grayish-blue-one);
+    border-radius: 12px;
+    
+}
+
+.notifications .box .content{
+    width:95%;
+    margin:0 auto;
+   
+    display: flex;
+    align-items: center;
+    
+}
+
+.notifications .box .content .image{
+    width:10%;
+    height: 100%;
+}
+
+.notifications .box .content div{
+    width:80%;
+    height: 100%;
+   
+}
+
+.notifications .box .content .image img{
+    width:85%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.notifications .box .content div p{
+    font-size: 16px;
+    color: var(--clr-grayish-blue);
+    display: flex;
+    }
+
+.notifications .box .content div p.message span,
+.notifications .box-nobackground .content div p.message span{
+            color: var(--clr-very-dark-blue);
+            font-weight: var(--ff-font-weight-bold);
+        }
+
+/* .notifications .box .content div p.message  span.dot{
+            background-color: var(--clr-red);
+            margin-left: 5px;
+            padding:0.1rem 0.5rem;
+            border-radius: 50px;
+} */
+
+.notifications .box .content .dot{
+    width:100%;
+    margin-left:12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications .box .content  p.time{
+    margin-left:12px;
+}
+
+.notifications .box .content .dot div.dot1{
+    background-color: var(--clr-red);
+   
+    height: 8px;
+    width:8px;
+    border-radius: 50px;
+}
+
+.notifications .box-nobackground{
+    width:100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    margin:.4rem 0rem;
+    background-color: var(--clr-white);
+    border-radius: 12px;
+    
+}
+
+.notifications .box-nobackground .content{
+    width:95%;
+    margin:0 auto;
+   
+    display: flex;
+    align-items: center;
+    
+}
+
+.notifications .box-nobackground .content .image{
+    width:10%;
+    height: 100%;
+}
+
+.notifications .box-nobackground .content .image img{
+    width:85%;
+    height: 80%;
+    border-radius: 50%;
+}
+.private-message{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+
+}
+
+.private-message .oepnspace{
+    width:2%;
+}
+
+.private-message p{
+    width:85%;
+    padding:0.8rem 0.6rem;
+    border:1px solid var(--clr-grayish-blue);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.private-message p:hover{
+    background-color: var(--clr-light-grayish-blue-two);
+    cursor: pointer;
+}
+
+
+.notifications .box-nobackground .content1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notifications .box-nobackground .content1 div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.notifications .box-nobackground .content1 div.chess img{
+    width:50px;
+    height: 50px;
+    align-items:flex-end;
+    border-radius: 12px;
+    margin-right: 0;
+}

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+:root{
+    --font-family:'Epilogue', sans-serif;
+    --clr-white:hsl(0,0%,98%);
+    --clr-medium-grey:hsl(0,0%,41%);
+    --clr-black:hsl(0,0%,8%);
+    --font-weight-neutral:500;
+    --font-weight-bold:800;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    font-family: var(--font-family);
+}
+
+header{
+    width:95%;
+    margin:0 auto;
+    padding:1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header div.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header div.left nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:25px;
+    list-style-type: none;
+}
+header div.left nav ul li{
+    margin-left:30px;
+}
+
+header div.left nav ul li a{
+    text-decoration: none;
+    color: var(--clr-medium-grey);
+}
+
+header div.right div.buttons button.login{
+    border:0;
+    background-color: var(--clr-white);
+    color: var(--clr-medium-grey);
+    font-family: var(--font-family);
+    margin-right: 20px;
+    font-weight: var(--font-weight-neutral);
+}
+
+header div.right div.buttons button.register{
+
+    background-color: var(--clr-white);
+    color: var(--clr-medium-grey);
+    border: 1px solid var(--clr-medium-grey);
+    border-radius: 12px;
+    padding:0.5rem 1rem;
+    font-weight: var(--font-weight-neutral);
+}
+
+section.intro{
+    width:80%;
+    margin:0 auto;
+    height:calc(100% - 10% - 66px);
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+section.intro div.left{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+section.intro div.left div.top{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:4rem 0rem;
+}
+
+section.intro div.left div.top div.title h1,
+    section.intro div.left div.top div.title h2{
+
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--clr-black);
+
+}
+
+section.intro div.left div.top div.description p{
+    width:80%;
+    line-height: 25px;
+}
+section.intro div.left div.top div.last-button button{
+    background-color: var(--clr-black);
+    padding:0.5rem 1rem;
+    color: var(--clr-white);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    border-radius: 12px;
+}
+
+section.intro div.left div.top div.last-button button:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    cursor: pointer;
+}
+
+section.intro div.left div.bottom {
+    width: 100%;
+}
+
+section.intro div.left div.bottom div.brands {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.intro div.left div.bottom div.brands svg{
+    width:20%;
+}
+
+
+section.intro div.right{
+    width:40%;
+    height: 100%;
+}
+section.intro div.right img{ 
+    width:100%;
+    height: 100%;
+}
