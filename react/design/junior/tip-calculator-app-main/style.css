@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    --font-family:'Space Mono', monospace;
+    --font-weight:700;
+    --clr-strong-cyan:hsl(172,67%,45%);
+    --clr-very-dark-cyan:hsl(186,14%,43%);
+    --clr-dark-grayish-cyan:hsl(186,14%,56%);
+    --clr-grayish-cyan:hsl(184,14%,56%);
+    --clr-light-grayish-cyan:hsl(185,41%,84%);
+    --clr-very-light-grayish-cyan:hsl(189,41%,97%);
+    --clr-white:hsl(0,0%,100%);
+    --font-size:24px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-light-grayish-cyan);
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+    width:55%;
+    height: 60%;
+    background-color: var(--clr-white);
+    margin:2rem 0rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .box{
+    width:95%;
+    height: 90%;
+    /* background-color: teal; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .box .left{
+    width:48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.container .box .right{
+    width:48%;
+    height: 100%;
+    background-color: teal;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.container .box .left .row1 p,
+.container .box .left .row2 p,
+.container .box .left .row3 p
+
+
+{
+    font-family: var(--font-family);
+    font-weight: 700;
+}
+
+.container .box .left .row1 div.box,
+.container .box .left .row3 div.box
+
+{
+    width:100%;
+    height: auto;
+    background-color: var(--clr-very-light-grayish-cyan);
+    padding:0.4rem;
+    border-radius: 8px;
+    display: flex;
+}
+
+.container .box .left .row1 div.box:hover{
+    border:1px solid var(--clr-grayish-cyan);
+}
+
+.container .box .left .row1 div.box div.logo,
+.container .box .left .row3 div.box div.logo
+
+{
+    width:10%;
+}
+
+.container .box .left .row1 div.box input,
+.container .box .left .row3 div.box input
+
+{
+    width:90%;
+    border:0;
+    background-color: var(--clr-very-light-grayish-cyan);
+    text-align: right;
+    padding:0.4rem 0rem;
+    color: teal;
+    font-family: var(--font-family);
+    font-weight: 700;
+   
+}
+.container .box .left .row1 div.box input:focus,
+.container .box .left .row3 div.box input:focus
+
+{
+    border: 0;
+}
+
+.container .box .left .row2 p{
+    margin:1rem 0rem;
+}
+.container .box .left .row2 .buttons{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+}
+.container .box .left .row2 .buttons button{
+    width:31%;
+    padding:0.8rem 0.5rem;
+    background-color: teal;
+    border:0;
+    border-radius: 8px;
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container .box .left .row2 .buttons button:last-child{
+    background-color: var(--clr-very-light-grayish-cyan);
+    color: var(--clr-strong-cyan);
+}
+
+.container .box .left .row2 .buttons button.button_clicked{
+    background-color: var(--clr-strong-cyan);
+
+}
+
+.container .box .right .row1,
+.container .box .right .row2
+
+{
+    width:85%;
+    margin:10px auto;
+}
+.container .box .right .row1 .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.4rem 0rem;
+}
+
+.container .box .right .row1 .content .text p{
+    color: var(--clr-white);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.container .box .right .row1 .content div.amount{
+    font-size: 2.5rem;
+    font-family: var(--font-family);
+    color: var(--clr-strong-cyan);
+}
+
+.container .box .right .row1 .content .text p:last-child{
+    font-size: 12px;
+}
+
+.container .box .right .row2 button{
+    width:100%;
+    padding:0.8rem 0.4rem;
+    background-color: var(--clr-strong-cyan);
+    color: teal;
+    font-family: var(--font-family);
+    border-radius: 8px;
+    border:0;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor:pointer;
+}
+
+@media (max-width:375px){
+
+    body{
+        width:100%;
+        height: auto;
+    }
+
+    div.logo{
+        padding:1.4rem 0rem;
+    }
+
+    .container {
+        width: 95%;
+        height:auto;
+        margin:0 auto;
+        background-color: white;
+    }
+    .container .box{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .box .left{
+        width:100%;
+        height: auto;
+    }
+
+    .container .box .left .row2 div.buttons button{
+        width:45%;
+    }
+
+    .container .box .right{
+        width:100%;
+        height: auto;
+    }
+    .container .box .left .row1 .box,.container .box .left .row3 .box{
+        display: flex;
+        flex-direction: row;
+    }
+}
