@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    --font-family:'Manrope', sans-serif;
+    --font-weight:800;
+    --clr-light-cyan:hsl(193,38%,86%);
+    --clr-neon-green:hsl(150,100%,66%);
+    --clr-grayish-blue:hsl(217,19%,38%);
+    --clr-dark-grayish-blue:hsl(217,19%,24%);
+    --clr-dark-blue:hsl(218,23%,16%);
+    --font-size:28px;
+}
+
+ * {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-dark-blue);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--clr-dark-grayish-blue);
+    width:40%;
+    height:auto;
+    border-radius: 12px;
+}
+
+.content{
+    width:80%;
+    height: auto;
+    margin:0 auto;
+    color: white;
+    padding:2rem 0rem;
+    position: relative;
+}
+
+.content p.number{
+    color: var(--clr-neon-green);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+}
+
+.content p.quote{
+    color: var(--clr-light-cyan);
+    padding:1.5rem 0rem;
+    font-family: var(--font-family);
+}
+
+.content .divider{
+    padding:0.4rem 0rem;
+}
+
+.content .dice{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--clr-neon-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:44%;
+    padding:0.8rem 0rem;
+}
+
+.content .dice:hover{
+    box-shadow: 1px 1px 30px  var(--clr-neon-green);
+}
