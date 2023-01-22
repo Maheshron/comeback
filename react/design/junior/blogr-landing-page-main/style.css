@@ -360,3 +360,71 @@ body{
 .section5 .footer .right .block ul li{
   padding:0.5rem 0rem;
 }
+.section2-mobile{
+    display: none;;
+}
+
+@media (max-width:375px){
+    body{
+        height:100%;
+        width:100%;
+    }
+    .section1,.section2,.section3,.section4{
+        width:100%;
+        height:100%;
+       
+    }
+    .section1 .intro{
+        padding:0;
+    }
+    .section1 .container .left nav{
+        display:none;
+    }
+    .section1 .container .right{
+        display:none;
+    }
+    .section2 .container,
+    .section3 .container,
+    .section4 .container{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .section2{
+        background: none;
+    }
+    .section2 .container .title h2{
+        font-size:1.7rem;
+        padding-top:1em ;
+        font-weight: normal;
+    }
+    .section2 .container .content .left{
+        width:95%;
+        margin:auto;
+        background: none;
+    }
+    .section2 .container .content {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .section2 .container .section2-mobile{
+        display:block;
+        width:100%;
+        height:340px;
+        background: url("./images/illustration-editor-mobile.svg");
+        background-repeat: no-repeat;    
+    }
+    .section3{
+    background-image: url("./images/bg-pattern-circles.svg");
+
+    }
+    .section3 .container .left,
+        .section3 .container .right{
+        width:100%;
+    }
+}
