@@ -427,4 +427,60 @@ body{
         .section3 .container .right{
         width:100%;
     }
+
+
+
+.section3 .container .right .description{
+    width:80%;
+    padding:1.5em 0.1em;
+    margin:0 auto;
+    text-align:center;
+}
+.section4{
+    flex-direction: column;
+}
+.section4 .right{
+    width:100%;
+    text-align: center;
+}
+.sectio4 .right .content .description p{
+    text-align: center;
+}
+
+
+
+.section5 {
+    height: 100%;
+}
+
+    .footer{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        height: 100%;
+        text-align: center;
+    }
+    .footer .left{
+        width:50%;
+        margin:0 auto;
+    }
+    
+    .section5 .footer .right{
+        width: 100%;
+        text-align: center;
+    }
+   
+    .footer .right{
+        display:flex;
+        flex-direction: column;
+    }
+
+   .section5 .footer .right .block{
+        width:100%;
+        
+    }
+
+    .footer .right .block ul{
+        width:100%;
+    }
 }
