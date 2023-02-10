@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <section class="section1">
+        <h3>IP Address Tracker</h3>
+        <div class="input">
+          <input type="text" id="ipvalue" placeholder="Enter IP Address ">
+          <div>
+            <img  src="./images/icon-arrow.svg" id="search"/>
+          </div>
+        </div>
+        <div class="content"> 
+            <div >
+              <p>IP Adress</p>
+              <h2 id="ipaddress">192.088.234.002</h2>
+            </div>
+            <div >
+              <p>Location</p>
+              <h2 id="location">Brooklyn,Ny,10001</h2>
+            </div>
+            <div >
+              <p>Timezone</p>
+              <h2 id="timezone">UTC-05:00</h2>
+            </div>
+            <div >
+              <p>Internet Service Provider</p>
+              <h2 id="isp">Spacex Starlink</h2>
+            </div>
+        </div>
+  </section>
+  
+  <section class="section2">
+    <div id="ipmap" style="width: 100%;height:75vh;">
+   
+  </div>
+  </section>
+    
+ 
+
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="script.js">
+
+</script>
+</body>
+</html>

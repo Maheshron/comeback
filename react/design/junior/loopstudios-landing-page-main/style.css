@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root{
+    --font-family-one:'Alata', sans-serif;
+    --font-family-two:'Josefin Sans', sans-serif;
+    --clr-white:hsl(0,0%,100%);
+    --clr-black:hsl(0,0%,0%);
+    --clr-dark-gary:hsl(0,0%,55%);
+    --clr-very-dark-gray:hsl(0,0%,41%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    max-width: 1440px;
+    margin:0 auto;
+}
+
+section.section1{
+    background-image: url("./images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.section1 .container{
+    width:80%;
+    margin:0 auto;
+    padding: 2em 0em;
+}
+
+section.section1 .container header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2em 0em;
+}
+section.section1 .container header div nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:3em;
+}
+section.section1 .container header div nav ul a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: var(--font-family-one);
+    color: var(--clr-white);
+}
+section.section1 .container div.content{
+    margin:12em 0em;
+    border: 1px solid var(--clr-white);
+    max-width: 600px;
+   
+}
+section.section1 .container div.content h1{
+    color: var(--clr-white);
+    font-family: var(--font-family-two);
+    font-size: 6.5rem;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+section.section2{
+    margin:10em 0em;
+}
+section.section2 .container{
+    width: 80%;
+    margin:0 auto;
+   position: relative;
+  
+    
+}
+section.section2 .container div.left{
+    width: 800px;
+  
+   
+   
+    
+}
+
+section.section2 .container div.right{
+    position: absolute;
+    max-width: 460px;
+    bottom:0;
+    right: 0;
+    background-color: var(--clr-white);
+    padding:3em 5em;
+}
+
+section.section2 .container div.right h2{
+    font-size: 3.6rem;
+    color: var(--clr-black);
+    text-transform: uppercase;
+    font-family: var(--font-family-two);
+}
+section.section2 .container div.right p{    
+    padding:1em 0em;
+    color: var(--clr-dark-gary);
+    font-size: 1.8rem;
+    font-family: var(--font-family-one);
+
+}
+
+section.section3{
+    margin:8em 0em;
+}
+
+section.section3 .container{
+    width: 80%;
+    margin:0 auto;
+}
+section.section3 .container .titleblock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.section3 .container .titleblock h1{
+    font-size: 2.2rem;
+    color: var(--clr-black);
+    font-family: var(--font-family-two);
+}
+
+section.section3 .container .titleblock a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--clr-black);
+    padding:1em 2em;
+    border: 1px solid var(--clr-black);
+    font-family: var(--font-family-two);
+}
+
+section.section3 .container .images{
+    margin:3em 0em;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2.2em;
+    column-gap: 1.8em;
+}
+
+section.section3 .container .images .image-container{
+        position: relative;
+        max-width:256px;
+}
+
+section.section3 .container .images .image-container a{
+        text-decoration: none;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        color: var(--clr-white);
+        font-family: var(--font-family-two);
+        position: absolute;
+        bottom:10%;
+        left:5%;
+    }
+    footer{
+        width: 100%;
+        margin-top: 10em;
+        background-color: var(--clr-black);
+    }
+
+    footer .container {
+        width: 80%;
+        margin:0 auto;
+    }
+
+    footer .container .top{
+        margin:2em 0em;
+        padding-top: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    footer .container .top .social-media img{
+        margin-left: 2em;
+    }
+
+    footer .container .bottom,
+        footer .container .bottom nav ul{
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    footer .container .bottom{
+        padding-bottom: 2em;
+    }
+    footer .container .bottom nav ul{
+        text-decoration: none;
+    }
+
+    footer .container .bottom nav ul li a{
+        text-decoration: none;
+        color: var(--clr-white);
+        font-size: 1.8rem;
+        margin-right:2em;
+        font-family: var(--font-family-one);
+
+    }
+    footer .container .bottom a{
+        text-decoration: none;
+        color: var(--clr-very-dark-gray);
+        font-family: var(--font-family-one);
+        font-size: 1.8rem;
+    }
