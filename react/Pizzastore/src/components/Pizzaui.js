@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
 import pizzabanner  from '../images/pizza.png';
 
@@ -10,7 +11,7 @@ function Pizzaui() {
                 <div className="content">
                     <p>Are You Hungry?</p>
                     <h1>Dont Wait!</h1>
-                    <button>Order now</button>
+                    <button><Link to="/cart" style={{textDecoration:"none",color:"black"}}>Order now</Link></button>
                 </div>
             </div>
             <div className="right">

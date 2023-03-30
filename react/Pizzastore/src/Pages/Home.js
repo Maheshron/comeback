@@ -4,7 +4,7 @@ import '../App.css';
 
 import Footer from '../components/Footer'
 import Pizzaui from '../components/Pizzaui'
-import Products from '../components/Products';
+import Productsone from '../components/Productsone';
 
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
      
         
         <Pizzaui />
-        <Products />
+        <Productsone />
         <Footer />
         
     </div>

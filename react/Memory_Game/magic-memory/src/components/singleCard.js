@@ -1,6 +1,7 @@
 import React from 'react'
 import "./singleCard.css";
 function SingleCard({card,handleChoice,flipped}) {
+  console.log(flipped);
 
   function handleClick(){
     handleChoice(card);

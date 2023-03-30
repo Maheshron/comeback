@@ -11,6 +11,7 @@ function AddExpenseModal({show,handleClose,defaultBudgetId}) {
 
     function handleSubmit(e){
         e.preventDefault();
+        console.log(budgetIdRef.current.value);
         addExpense({
             description:descriptionRef.current.value,
             amount:parseFloat(amountRef.current.value),

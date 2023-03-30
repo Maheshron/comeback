@@ -19,7 +19,11 @@ function Login() {
 
     catch(err){
       setErr(true);
+      alert("User not Found")
+      e.target[0].value = "";
+      e.target[1].value = "";
     }
+    
 
   }
 
@@ -30,10 +34,11 @@ function Login() {
         <h2>Pizza Shop</h2>
         <div className="formbox">
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="email" />
-            <input type="password" placeholder="password" />
+            <input type="email" required placeholder="email" />
+            <input type="password" required placeholder="password" />
             <input type="submit" value="Login" />
         </form>
+        { err ? <h1>Sorry User Not found Please Register</h1> : ""}
         <p>You dont have an account? <Link to="/register">Register</Link></p>
         </div>
     </div>

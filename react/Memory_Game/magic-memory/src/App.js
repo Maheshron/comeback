@@ -78,6 +78,7 @@ function App() {
               flipped={card === choiceOne || card === choiceTwo || card.match}
               />
             ))
+           
           }
 
         </div>

@@ -8,10 +8,11 @@ function ViewExpenseModal({show,defaultBudgetId,handleClose}) {
     const {getBudgetExpenses ,budgets,deleteBudget,deleteExpense}  = useBudgets(); 
     const expenses = getBudgetExpenses(defaultBudgetId);
 
-    const budget = UNCATEGORIZED_BUDGET_ID === defaultBudgetId
-    ? {name:"UnCategorized",id:UNCATEGORIZED_BUDGET_ID}
+    const budget = 
+    UNCATEGORIZED_BUDGET_ID === defaultBudgetId
+    ? { name:"UnCategorized", id:UNCATEGORIZED_BUDGET_ID }
     : budgets.find(b => b.id === defaultBudgetId);
-    console.log(show,defaultBudgetId);
+    console.log(budget);
     return (
     <>
         <Modal show={show}>
@@ -19,6 +20,7 @@ function ViewExpenseModal({show,defaultBudgetId,handleClose}) {
             <Modal.Title>
                 <Stack direction="horizontal" gap="2">
                    <div> Expenses - { budget?.name } </div>
+
                     {defaultBudgetId !== UNCATEGORIZED_BUDGET_ID &&(
                         <Button onClick={ () => {
                             deleteBudget(defaultBudgetId) 

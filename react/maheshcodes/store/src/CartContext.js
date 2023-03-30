@@ -48,6 +48,8 @@ export function CartProvider({children}){
                         : product
                     )
                 )
+               
+
             }
 
         }
@@ -68,6 +70,7 @@ export function CartProvider({children}){
                         : product
                     )
                 )
+            
             }
 
 

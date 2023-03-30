@@ -3,10 +3,11 @@ import Home from './Pages/Home';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
 import Cart from "./components/Cart";
+import Success from './Pages/Success';
 import { BrowserRouter, Routes,Route,Navigate  } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
-import Products from './components/Products';
+import Productsone from './components/Productsone';
 import Navbar from './components/Navbar';
 import './App.css';
 import CartProvider from './CartContext';
@@ -29,7 +30,7 @@ function App() {
     <div className='container'>
      <CartProvider>
     <BrowserRouter>
-     <Navbar />
+        <Navbar />
         <Routes>
 
     
@@ -44,8 +45,8 @@ function App() {
            />
             <Route  path="cart" element={<Cart />} />
             <Route path="login" element={<Login />} />
-            <Route path="products" element={<Products />} />
-
+            <Route path="products" element={<Productsone />} />
+            <Route path="success" element={<Success />} />
             <Route path="register" element={<Register />} />
           </Route>
         </Routes>

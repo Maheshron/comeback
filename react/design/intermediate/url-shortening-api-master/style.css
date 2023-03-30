@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+:root{
+    --font-family:'Poppins', sans-serif;
+    --clr-cyan:hsl(180,66%,49%);
+    --clr-dark-violet:hsl(257,27%,26%);
+    --clr-red:hsl(0,87%,67%);
+    --clr-gray:hsl(0,0%,75%);
+    --clr-grayish-violet:hsl(257,7%,63%);
+    --clr-very-dark-blue:hsl(255,11%,22%);
+    --clr-very-dark-violet:hsl(260,8%,14%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    max-width: 1440px;
+    margin:0 auto;
+    font-family: var(--font-family);
+}
+
+section.section1,section.section2{
+    width: 100%;
+}
+
+section.section1 div.container{
+    width: 80%;
+    margin:0 auto;
+}
+
+section.section1 div.container header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:3em 0em;
+}
+
+section.section1 div.container header div.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:2em;
+}
+
+section.section1 div.container header div.left nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:2em;
+
+}
+
+section.section1 div.container header div.left nav ul li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--clr-grayish-violet);
+    font-weight: bold;
+}
+
+section.section1 div.container header div.right  button{
+    outline:0;
+    border: none;
+    font-size:2rem;
+    cursor: pointer;
+
+}
+
+section.section1 div.container header div.right  button.login{
+    background: none;
+    color: var(--clr-grayish-violet);
+    margin-right: 2em;
+}
+
+section.section1 div.container header div.right  button.sign-up{
+    background-color: var(--clr-cyan);
+    color: white;
+    padding:0.5em 0.8em;
+    border-radius: 50px;
+}
+
+section.section2 div.container{
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:2em;
+}
+
+section.section2 div.container div.left h1{
+    font-size: 6rem;
+}
+
+section.section2 div.container div.left p{
+    font-size: 2rem;
+    color: var(--clr-grayish-violet);
+}
+section.section2 div.container div.left button{
+    border: none;
+    outline:none;
+    background-color: var(--clr-cyan);
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    margin: 1.5em 0em;
+    border-radius: 50px;
+}
+
+section.section2 div.container div.right{
+    width:100%;
+    height: 65vh;
+    background-image: url("./images/illustration-working.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 80px;
+} 
+
+section.section3{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 130vh;
+    margin-top: 6em;
+    position: relative;
+  
+   
+}
+
+section.section3 .container{
+    width: 80%;
+    position: absolute;
+    top:-8%;
+    left: 10%;
+   
+
+   
+}
+
+section.section3 .container .box1{
+    width: 100%;
+    padding:5em 0em;
+   outline:1px solid green;
+    background-image: url("./images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--clr-very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+  
+   
+}
+section.section3 .container .box1 div{
+    width: 90%;
+    margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 3em;
+
+
+}
+
+section.section3 div.result{
+    width: 100%;
+    background-color: white;
+    margin: 1em 0em;
+    padding:0.5em 0em;
+    text-decoration: none;
+    display: none;
+}
+section.section3 div.result div.link{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.section3 div.result div.link a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--clr-grayish-violet);
+}
+
+section.section3 div.result div.link div a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--clr-cyan);
+}
+section.section3 div.result div.link div button{
+    color: white;
+    font-size: 2rem;
+    outline:none;
+    border: none;
+    background-color: var(--clr-cyan);
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    cursor: pointer;
+    
+}
+
+
+section.section3 div.result div div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:2em;
+}
+
+section.section3 .container .box1 div div{
+    width:85%;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+section.section3 .container .box1 div div input[type="text"]{
+    width: 100%;
+    outline:none;
+    border: none;
+    background-color: white;
+    padding:1.8em;
+    height: 45px;
+}
+
+section.section3 .container .box1 div div input[type="text"]::placeholder{
+    font-size: 2rem;
+    color: var(--clr-gray);
+}   
+
+section.section3 .container .box1 div button{
+    background-color: var(--clr-cyan);
+    width: 15%;
+    border:none;
+    outline:none;
+    color: white;
+    font-size: 2rem;
+    padding:0.6em 0.3em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+section.section3 .container .box2
+{
+    width: 50%;
+    margin:2em auto;
+    text-align: center;
+    padding: 3em 0em;
+}
+
+section.section3 .container .box2 h1{
+    padding-top: 1em;
+    font-size: 3rem;
+}
+section.section3 .container .box2 p{
+    font-size: 2rem;
+    color: var(--clr-grayish-violet);
+}
+
+section.section3 .container .box3
+{
+    width: 100%;
+    position: relative;
+}
+
+section.section3 .container .box3 .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    width: 100%;
+    position: relative;
+}
+
+
+section.section3 .container .box3 .cards .card{
+    max-width: 330px;
+    background-color: white;
+    position: relative;
+}
+
+section.section3 .container .box3 .cards .card div{
+    width: 95%;
+    margin:0 auto;
+
+}
+
+
+section.section3 .container .box3 .cards .card div div.image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--clr-very-dark-blue);
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.5em 0.5em;
+    margin-top:-4em;
+}
+
+section.section3 .container .box3 .cards .card div div.image img{
+    height: 70%;
+    width: 70%;
+    background-color: var(--clr-very-dark-blue);
+    
+   
+    
+}
+
+section.section3 .container .box3 .cards .card h5{
+    font-size: 2.5rem;
+    color: black;
+    padding:0.5em 0em;
+}
+
+section.section3 .container .box3 .cards .card p{
+    font-size: 1.8rem;
+    color: var(--clr-grayish-violet);
+    padding:0.5em 0em;
+}
+
+section.section3 .container .box3 .cards .card.second{
+    margin-top: 6em;
+}
+
+section.section3 .container .box3 .cards .card.third{
+    margin-top: 12em;
+}
+
+section.section3 .container .box3 .line{
+    width: 100%;
+    height: 10px;
+    background-color: cyan;
+    position: absolute;
+    top: 52%;
+}
+
+section.section4{
+    width: 100%;
+    height: 30vh;
+    background-color: var(--clr-very-dark-blue);
+    background-image: url("./images/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.section4 div{
+    width: 100%;
+    text-align: center;
+}
+
+section.section4 div h1{
+    color: white;
+    font-size: 3rem;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+section.section4 div a{
+    text-decoration: none;
+   
+    font-size: 1.8rem;
+    color: white;
+    background-color: var(--clr-cyan);
+    border-radius: 50px;
+    padding:1rem 2rem;
+}
+footer{
+    width: 100%;
+    background-color: var(--clr-very-dark-blue);
+    color: white;
+}
+
+footer .container{
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 2em 0em;
+}
+
+footer .container .first{
+    width: 25%;
+    
+}
+footer .container .second{
+    width: 50%;
+    display: flex;
+    
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+footer .container .second div h4{
+    color: white;
+    font-size: 2rem;
+}
+footer .container .second div ul{
+    list-style-type: none;
+}
+footer .container .second div ul li{
+    padding: 1em 0em;
+}
+footer .container .second  ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--clr-grayish-violet);
+    padding: 1em 0em;
+}
+
+footer .container .third{
+    width: 25%;
+  
+}
+footer .container .third img{
+    margin-right: 2em;
+}

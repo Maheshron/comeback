@@ -2,6 +2,7 @@ import React ,{useState,useContext} from 'react';
 import {Button,Navbar,Modal} from "react-bootstrap";
 import { CartContext } from "../CartContext";
 import  CartProduct  from "./CartProduct";
+import axios from "axios";
 
 function NavbarComponent() {
     const cart = useContext(CartContext);
@@ -9,66 +10,72 @@ function NavbarComponent() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    // const checkout =  async () => {
-    //       await fetch('http://localhost:4000/checkout',{
-    //         method:"POST",
-    //         headers:{
-    //           'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({items: cart.items})
-    //       }).then((response)=>{
-    //         return response.json();
-    //       }).then((response) => {
-    //         if(response.url){
-    //           window.location.assign(response.url)
-    //         }
-    //       });
-    // }
+    function loadScript(src){
+      return new Promise((resolve) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.onload = () =>{
+          resolve(true);
+        };
+        script.onerror = () => {
+          resolve(false);
+        };
+        document.body.appendChild(script);
+      })
+    }
 
-      const loadScript = (src) =>{
-          return new Promise((resolve) =>{
-            const script = document.createElement('script');
-            script.src = src;
-            script.onload = () =>{
-              resolve(true)
-            }
-            script.onerror = () =>{
-              resolve(false);
-            }
+    async function displayRazorpay(amount){
+        // const res = await loadScript(
+        //   "https://checkout.razorpay.com/v1/checkout.js"
+        // );
+        // if(!res){
+        //   alert("Razorpay sdk failed to load.Are you online?")
+        //   return;
+        // }
+        // const result = await axios.post("http://localhost:5000/payment/orders");
+        // if(!result){
+        //   alert("Server error.Ary you online?");
+        //   return;
+        // }
+        // const {amount,id:order_id,currency} = result.data;
 
-            document.body.appendChild(script)
-          })
-      }
-
-
-      const displayRazorpay = async (amount1) =>{
-        const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
-
-        if(!res){
-          alert('you are offline failed to load');
-          return 
-        }
+        const { data: { keyId } } = await axios.get("https://pizzashop-backend-maheshron.onrender.com/api/getkey");
+        const { data: { order } } = await axios.post("https://pizzashop-backend-maheshron.onrender.com/api/checkout",{amount})
 
         const options = {
-          key:"QnZJstqFV6vwB9DBrwrU7Orl",
+          key:keyId,
+          amount:order.amount,
           currency:"INR",
-          amount:amount1 * 100,
-          name:"Mahesh First Payment Gateway",
-          description:"Thanks for purchasing",
-          image:'https://mern-blog-akky.herokuapp.com/static/media/logo.8c649bfa.png',
-          handler:function(response){
-            alert(response.razorpay_payment_id)
-            alert("Payment Successfully")
-          },
+          name:"Mahesh",
+          description:"TEST Transaction",
+          order_id:order.id,
+          callback_url:"https://pizzashop-backend-maheshron.onrender.com/api/paymentverification",
+          // handler:async function (response){
+          //   const data ={
+          //     orderCreationId:order_id,
+          //     razorpayPaymentId:response.razorpay_payment_id,
+          //     razorpayOrderId:response.razorpay_order_id,
+          //     razorpaySignature:response.razorpay_signature,
+          //   };
+          //   const result = await axios.post("http://localhost:5000/payment/success",data);
+          //   alert(result.data.msg);
+          // },
           prefill:{
-            name:"Mahesh First Payment Gateway"
-          }
+            name:"MAHESH KUMAR",
+            email:"mahesh@gmail.com",
+            contact:"999999999"
+        },
+        notes:{
+          address:"Mahesh Dey Corporate Office"
+        },
+        theme:{
+          color:"#61dafb",
+        }
 
         };
         const paymentObject = new window.Razorpay(options);
         paymentObject.open();
-
-      }
+    }
 
 
 
@@ -101,9 +108,10 @@ function NavbarComponent() {
                   <CartProduct  key={idx} id={currentProduct.id} quantity={currentProduct.quantity} ></CartProduct>
                 ))}
                 <h1>Total :{ cart.getTotalCost().toFixed(2) } </h1>
-                <Button variant="success" onClick={displayRazorpay(totalBill)}>
+                {/* <Button variant="success" onClick={displayRazorpay(totalBill)}>
                   Purchase Items
-                </Button>
+                </Button> */}
+                <Button variant="success" onClick={() => displayRazorpay(totalBill)}>Purchase Items</Button>
            </>  
            :
            <h2>There are no items in your cart!</h2>

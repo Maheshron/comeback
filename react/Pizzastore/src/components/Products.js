@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import pizzaimg from '../images/peproni.png';
 import pizzalogo from '../images/logo.png'
 import Footer from './Footer'
@@ -11,14 +11,21 @@ import { CartContext } from "../CartContext";
 function Products() {
 
     const cart = useContext(CartContext);
+    const [toggle,setToggle] =  useState(false);
 
+    
+    const addToCart = (id) =>{
+        cart.addOneToCart(id);
+        setToggle(!toggle);
+    }
+    
   return (
     <>
           
             <section className="section3">
             <div className="title">
                 <p>
-                products
+                PIZZAS
             </p>
         </div>
             <div className="menu">
@@ -34,12 +41,16 @@ function Products() {
                                 <p>{product.title}</p>
                             </div>
                             <div className="type">
-                                <p><span>{product.type}</span></p>
+                                <p>{product.type}</p>
                             </div>
                             <div className="last">
                                 <div className="price">Rs - {product.price}</div>
                                 <div>
-                                    <button onClick={() => cart.addOneToCart(product.id)} >Add</button>
+                                     
+                                    <button className={toggle ? "added":" "} onClick={() => addToCart(product.id)} >{toggle ? "Added": "Add"}</button>
+
+                                  
+
                                 </div>
                             </div>
                         </div>

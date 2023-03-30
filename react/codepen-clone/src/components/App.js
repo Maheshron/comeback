@@ -44,17 +44,17 @@ ${css}
       <Editor1
         value={html}
         onChange={(m) => {setHtml(m)}}
-        language="html"
+        language="Write html here"
         />
         <Editor1
         value={css}
         onChange={setCss}
-        language="css"
+        language="Write Css here"
         />
         <Editor1
         value={js}
         onChange={setJs}
-        language="js"
+        language="Write javascript here"
         />
       
         

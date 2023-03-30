@@ -25,19 +25,19 @@ function Navbar() {
                 </div>
                 <nav>
                     <ul>
-                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/">Home</Link></li> 
                        
                         {
                         currentUser ? 
                         <>
-                        <li><Link to="/products">Products</Link></li>
-                        <li onClick={()=>signOut(auth)}>Sign out</li>
+                        <li><Link to="/products">Pizzas</Link></li>
+                        <li onClick={()=>signOut(auth)}><Link to="/login">Sign Out</Link></li>
                         <li className="cart"><Link to="/cart">{ productsCount }</Link><img src={cart} alt="" /></li>
 
                         </>
                         :
                         <>
-                        <li><Link to="/register">Register</Link></li>
+                          <li><Link to="/register">Register</Link></li>  
                         <li><Link to="/login">Login</Link></li>
                         </>
                     }

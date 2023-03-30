@@ -16,7 +16,7 @@ body{
 .container{
   width:85%;
   margin:auto;
-  height: 100vh;
+  
 
 }
 
@@ -25,6 +25,9 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header nav{
+  width:500px;
 }
 
 header nav ul{
@@ -35,7 +38,7 @@ header nav ul{
 }
 
 header nav ul li{
-  margin-left:12px;
+  margin-left:2em;
 }
 header nav ul li a{
   text-decoration: none;
@@ -44,10 +47,21 @@ header nav ul li a{
 }
 header nav ul li.cart{
   background-color: orange;
+  width:128px;
   padding:0.5rem 1.4rem;
   border-radius: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+header nav ul li.cart img{
+    width: 21%;
+    height:10%;
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 .section2{
@@ -161,7 +175,7 @@ header nav ul li.cart{
   text-align: center;
   background-color: white;
 }
-.section3 .cards .card div.type p span{
+.section3 .cards .card div.type p {
   background-color: #e1e1e1;
   padding: 0.2rem 0.9rem;
   border-radius: 50px;
@@ -244,7 +258,7 @@ header nav ul li.cart{
 
 section.footer{
   width:100%;
-  height: 20px;
+ 
   background-color: orange;
   color: white;
   align-items: center;
@@ -275,6 +289,9 @@ div.image{
   height: 100%;
   display: flex;
   justify-content: space-between;
+}
+div.image .image1 {
+  overflow-y:hidden;
 }
 
 div.image .image1 img{
@@ -331,7 +348,7 @@ div.total button{
 }
 .container1{
   width:100%;
-  height: 100vh;
+ 
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -359,8 +376,9 @@ form{
   flex-direction: column;
  justify-content: space-evenly;
 }
-form input[type="text"],form input[type="password"]{
+form input[type="text"],form input[type="password"],form input[type="email"]{
   padding:1rem 0.4rem;
+  margin:2em 0em;
   border:none;
   border-bottom: 2px solid orange;
 }
@@ -369,7 +387,16 @@ form input[type="submit"]{
   color: black;
   font-weight: bold;
   font-size: 1rem;
+  margin:2em 0em;
   padding:1rem 0.5rem;
   border:none;
   border-radius: 50px;
+  cursor: pointer;
+}
+
+
+.section3 .cards .card div.last div button.added{
+  background-color: lightgreen;
+  color:white;
+  cursor:not-allowed;
 }

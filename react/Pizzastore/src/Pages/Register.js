@@ -9,12 +9,16 @@ function Register() {
 
   const [err,setErr] = useState(false);
   const [loading,setLoading] = useState(false);
+  const [pass,setPass] = useState("");
   const navigate = useNavigate();
     const handleSubmit = async (e) => {
       e.preventDefault();
       setLoading(true);
       const email = e.target[0].value;
       const password = e.target[1].value;
+      if(password.length < 6){
+        setPass("Password should be atleast 6 characters");
+      }
 
       try{
         const res = await createUserWithEmailAndPassword(auth,email,password);
@@ -22,6 +26,8 @@ function Register() {
       }
       catch(err){
         setErr(true)
+        console.log(err.message);
+        setPass(err.message);
       }
     }
 
@@ -32,11 +38,13 @@ function Register() {
                 <h2>Pizza Shop</h2>
                 <div className="formbox">
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="email" />
-                    <input type="password" placeholder="password" />
+                    <input type="email" required placeholder="email" />
+                    <input type="password" required placeholder="password" />
                     <input type="submit" value="Register" />
                 </form>
                 <p>You do have an account ? <Link to="/login">Login</Link></p>
+                { err &&    <p> {pass}</p>}
+                {/* {pass && <p>password sould be atleast 6 characters</p>} */}
                 </div>
             </div>
         </div>

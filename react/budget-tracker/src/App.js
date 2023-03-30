@@ -5,7 +5,8 @@ import BudgetCard from "./components/BudgetCard";
 import AddBudgetModal from "./components/AddBudgetModal";
 import AddExpenseModal from "./components/AddExpenseModal";
 import ViewExpenseModal from "./components/ViewExpenseModal";
-import { useBudgets } from "./context/BudgetContext";
+import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./context/BudgetContext";
+import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
   function viewexpensemodal(budgetId){
     setViewExpenseModal(true);
     setAddviewexpensemodalId(budgetId);
-    console.log(addviewexpensemodalId);
+    console.log(viewExpenseModal);
 }
    
   return (
@@ -72,6 +73,10 @@ function App() {
           )
           })
           }
+          <UncategorizedBudgetCard 
+          OnAddExpenseClick={ () =>  openAddExpenseModal(UNCATEGORIZED_BUDGET_ID)}
+          OnViewExpenseClick = {() => setViewExpenseModal(UNCATEGORIZED_BUDGET_ID)}
+          />
          
         </div>
 

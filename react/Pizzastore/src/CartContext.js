@@ -36,7 +36,8 @@ export function CartProvider({ children }){
                     id:id,
                     quantity:1,
                     title:name.title,
-                    price:name.price
+                    price:name.price,
+                    inCart:true
                 }
                 ]
             )

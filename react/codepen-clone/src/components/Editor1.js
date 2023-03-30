@@ -6,6 +6,7 @@ import { defaultKeymap, indentWithTab } from '@codemirror/commands';
 import { javascript } from '@codemirror/lang-javascript';
 import { xml } from "@codemirror/lang-xml";
 import { css } from "@codemirror/lang-css";
+import { basicSetup } from 'codemirror';
 
 export const Editor1 = (props) => {
   const editor = useRef();
@@ -41,6 +42,13 @@ export const Editor1 = (props) => {
         keymap.of([defaultKeymap, indentWithTab]),
         
         javascript(),xml(),css(),
+        EditorView.lineWrapping,
+        EditorView.theme({
+          "&":{
+            color:"white",
+            backgroundColor:"#034"
+          }
+        }),
         onUpdate
       ],
     });
