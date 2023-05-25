@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Karla:wght@400;700&display=swap');
+
+:root{
+    --ff-font-family-one: 'DM Serif Text', serif;
+    --ff-font-family-two: 'Karla', sans-serif;
+    --clr-dark-violet : hsl(256,26%,20%);
+    --clr-grayish-blue:hsl(216,30%,68%);
+    --clr-very-dark-violet:hsl(270,9%,17%);
+    --clr-dark-grayish-violet:hsl(273,4%,51%);
+    --clr-very-light-gray:hsl(0,0%,98%);
+    
+    
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size:62.5%;
+
+}
+
+body{
+    max-width:1440px;
+    
+    margin:0 auto;
+}
+
+div.container{
+    width:80%;
+    margin:4em auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:2em;
+}
+
+nav ul li a{
+    font-size:2rem;
+    color: var(--clr-dark-violet);
+    font-family: var(--ff-font-family-two);
+    text-transform: uppercase;
+}
+
+nav ul li a.cta-button{
+    color:var(--clr-very-dark-violet);
+    border:1px solid var(--clr-very-dark-violet);
+    padding:0.2em 0.8em;
+}
+
+section.section-one {
+    background-color: var(--clr-dark-violet);
+    color: white;
+    height:80vh;
+    background-image: url('images/bg-pattern-intro-right-desktop.svg'),url("images/bg-pattern-intro-left-desktop.svg");
+    background-repeat: no-repeat,no-repeat;
+    background-position-y: 0px,151px;
+    background-position-x:959px ,-79px;
+    background-size:contain,contain;
+    z-index:1;
+}
+/* section.bg-banner{
+    background-position-x: 120px;
+    background-repeat: no-repeat;
+    background-position-y: 240px;
+    
+    background-size:contain;
+    z-index: 1;
+} */
+.section-one main{
+    width:80%;
+    margin:4em auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap:2em;
+    
+}
+
+.section-one main div.left , .section-one main div.right{
+    margin:6em 0em;
+   
+    flex: 1;
+}
+
+.section-one main div.right{
+   
+    width: 100%;
+    height: 100%;    
+}
+
+.section-one main div.right div{
+    width: 100%;
+    height: 100%;
+    /* border:1px dotted red; */
+    /* position: relative; */
+    /* background: url("./images/bg-pattern-intro-right-desktop.svg"); */
+
+    
+}
+
+.section-one main div.right {
+    height: 100%;
+   
+}
+
+.section-one main div.right div img{
+    width: 100%;
+    height: 100%;
+}
+
+.section-one main div.left div.line {
+    width:150px;
+    margin-bottom:5em;
+    background-color: white;
+    height: 1px;
+}
+
+.section-one main div.left h1.title {
+        font-size:7rem;
+        margin:0.5em 0em;
+        line-height: 1em;
+        font-family: var(--ff-font-family-one);
+} 
+
+.section-one main div.left p {
+    font-size:1.8rem;
+    margin-bottom:3em;
+
+    color: white;
+    font-family: var(--ff-font-family-two);
+}
+
+.section-one main div.left a {
+    border:1px solid white;
+    margin-top:3em;
+    padding: .3em 1.5em;
+    font-size: 1.8rem;
+    font-family: var(--ff-font-family-two);
+}

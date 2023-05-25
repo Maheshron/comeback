@@ -1,18 +1,25 @@
-const cart = ["shoes","pants","kurtas"];
+function delay(i){
+  return new Promise(function(resolve,reject){
+    setTimeout(function(){
+      resolve(i)
+    }, i * 500)
+  })
+}
 
-const GITHUB_API = 'https://api.github.com/users/Maheshron';
+async function test(){
+  console.log("started");
+  for(var i=1;i < 10;i++){
+   const data = await delay(i);
+   console.log(data);
+  }
+  console.log("Ended");
+}
 
-const user = fetch(GITHUB_API);
-console.log(user);
+test();
 
 
-createOrder(cart)
-.then(function(orderId){
-  return  proceedToPayment(orderId)
-})
-.then(function(paymentInfo){
-  return  showOdersummary(paymentInfo)
-})
-.then(function(paymentInfo){
-    return    updateWallet(paymentInfo) 
-});
+
+
+
+
+
