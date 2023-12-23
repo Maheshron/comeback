@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Familjen Grotesk', sans-serif;
-  background: #000;
+   background: #000; 
   color: #fff;
 }
 
@@ -135,9 +135,44 @@ section {
   animation-fill-mode: both;
 }
 
+.grid-images{
+background-color: white;
+height: auto;
+color:black;
+padding:2em;
+text-align: center;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.grid-images div.card {
+  width:350px;
+  height: auto;
+  
+}
+.grid-images div.card:hover{
+  border:1px solid black;
+  background-color: #000;
+  color:white;
+  cursor: pointer;
+}
+
+.grid-images div.card div.image,
+.grid-images div.card div.title,
+.grid-images div.card div.price {
+  width: 100%;
+  height: auto;
+}
+.grid-images div.card div.image img{
+  width:100%;
+  height: 100%;
+}
+
 /* Background images */
 .section-a {
-  background-image: url('../img/mainbg.jpg.jpg');
+  background-image: url('../imgone/home-page-image.jpg');
 }
 .section-b {
   background-image: url('../img/section-b.webp');
@@ -208,7 +243,7 @@ footer {
 footer ul {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
 }
 
