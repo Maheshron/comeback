@@ -10,9 +10,24 @@
 
 body {
   font-family: 'Familjen Grotesk', sans-serif;
-   background: #000; 
+   /* background: #380b66; 
+  color: #ffbf00; */
+  /* background-color: #000;
+  color:#fff; */
+}
+.container{
+  width: 99%;
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: #000;
   color: #fff;
 }
+/* 
+blue:#380b66
+gold:#ffbf00
+black:#000
+white:#fff
+*/
 
 a {
   text-decoration: none;
@@ -24,8 +39,10 @@ ul {
 }
 
 div.header{
-  background-color: white;
-  color:black;
+   background-color: white;
+  color:black; 
+  /* background-color: #380b66;
+  color: #ffbf00; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,7 +94,9 @@ div.header{
   margin-right: 20px;
   padding-bottom: 2px;
 }
-
+.desktop-main-menu ul li a{
+  font-size: 1.3rem;
+}
 /* Menu item bottom border */
 .desktop-main-menu ul li a::after {
   content: '';
@@ -116,7 +135,7 @@ section {
 }
 
 .section-inner h4 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 5px;
   font-weight: 300;
   animation: fadeInUp 0.5s ease-in-out;
@@ -143,7 +162,7 @@ padding:2em;
 text-align: center;
 display: flex;
 align-items: flex-start;
-justify-content: space-between;
+justify-content: space-evenly;
 flex-wrap: wrap;
 }
 
@@ -237,9 +256,12 @@ flex-wrap: wrap;
 /* Footer */
 footer {
   position: relative;
-  padding: 55px 0;
+  /* padding: 55px 0; */
 }
-
+div.caution{
+  padding-top:1em;
+  border-bottom: 1px solid white;
+}
 footer ul {
   display: flex;
   justify-content: center;
@@ -249,7 +271,7 @@ footer ul {
 
 footer ul li {
   margin-right: 30px;
-  color: #aaa;
+  color: #fff;
   text-transform: uppercase;
   font-size: 13px;
   line-height: 2.5;
@@ -257,11 +279,16 @@ footer ul li {
 
 footer ul li a {
   color: #fff;
+
   transition: color 0.6s;
+  font-size:1.3rem;
 }
 
-footer ul li a:hover {
+/* footer ul li a:hover {
   color: #aaa;
+} */
+footer h1{
+  text-align: center;
 }
 
 /* Hamburger Menu */
@@ -275,6 +302,7 @@ footer ul li a:hover {
   height: 20px;
   background: none;
   border: none;
+  display: none;
 }
 
 .hamburger-top,
@@ -285,7 +313,7 @@ footer ul li a:hover {
   height: 2px;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #ffbf00;
   transition: all 0.5s;
 }
 
@@ -490,6 +518,13 @@ footer ul li a:hover {
   .desktop-main-menu {
     display: block;
   }
+  .section-a{
+    background-image: none;
+  }
+  .section-a {
+    background-image: url('../imgone/home-page-1.jpg');
+    background-size: cover;
+  }
 
   /* Show main mobile items */
   .mobile-only {
@@ -503,13 +538,34 @@ footer ul li a:hover {
    flex-direction: column;
    height: auto;
   }
-
+  .hamburger{
+    display: block;
+  }
+  footer ul li a{
+    text-align: center;
+  }
+  footer ul{
+    padding:45px 0px;
+  } 
 }
 
 @media (max-width: 600px) {
+  .section-a{
+    background-size: cover;
+  }
+  .section-a{
+    background-image: none;
+  }
+  .section-a {
+    background-image: url('../imgone/home-page-1.jpg');
+    background-size: cover;
+  }
   div.header{
     flex-direction: column;
     height: auto;
+  }
+  .hamburger{
+    display: block;
   }
   .section-inner {
     bottom: 75px;
@@ -547,5 +603,79 @@ footer ul li a:hover {
 
   .stats div {
     margin-bottom: 20px;
+  }
+  footer ul li a{
+    text-align: center;
+  }
+   footer ul{
+    padding:45px 0px;
+  }
+}
+@media (max-width: 450px) {
+  .section-a{
+    background-image: none;
+    height: 350px;
+  }
+  .section-a {
+    background-image: url('../imgone/home-page-1.jpg');
+    background-size: cover;
+    /* background-position-y: -75px;
+    background-position-x: -645px; */
+    background-size: 100%;
+  }
+  .section-inner {
+    top:84px;
+    left: 20px;
+  }
+  .section-inner h3 ,.section-inner h4{
+    font-size: 1.1rem;
+  }
+  footer ul li a{
+    text-align: center;
+    
+  }
+  footer{
+    width: 95%;
+    margin: 0 auto;
+  }
+   footer ul{
+    padding:45px 0px;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .section-a{
+    background-image: none;
+    height: 350px;
+  }
+  .section-a {
+    /* background-image: url('../imgone/home-page-2.jpg');
+    background-size: cover; */
+    /* background-position-y: -75px;
+    background-position-x: -645px; */
+    background-size: 100%;
+  }
+  .section-inner{
+    background-image: url('../imgone/home-page-2.jpg');
+    background-size: 100%;
+  }
+  .section-inner {
+    top:25px;
+    left: 20px;
+  }
+  .section-inner h3 ,.section-inner h4{
+    font-size: 1.2rem;
+  }
+  footer ul li a{
+    text-align: center;
+   
+  }
+  footer{
+    width: 95%;
+    margin: 0 auto;
+  }
+  footer ul{
+    padding:45px 0px;
   }
 }
